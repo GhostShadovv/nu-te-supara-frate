@@ -1,0 +1,437 @@
+object fLobby: TfLobby
+  Left = 226
+  Top = 134
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsToolWindow
+  Caption = 'Lobby'
+  ClientHeight = 239
+  ClientWidth = 784
+  Color = clInfoBk
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lNumaratoareInversa: TLabel
+    Left = 432
+    Top = 11
+    Width = 99
+    Height = 13
+    Caption = 'Numaratoare Inversa'
+    Visible = False
+  end
+  object lAfisareNume: TLabel
+    Left = 240
+    Top = 8
+    Width = 62
+    Height = 13
+    Caption = 'lAfisareNume'
+    Visible = False
+  end
+  object grupConectare: TGroupBox
+    Left = 24
+    Top = 22
+    Width = 209
+    Height = 121
+    TabOrder = 0
+    object lAdresaIP: TLabel
+      Left = 8
+      Top = 13
+      Width = 46
+      Height = 13
+      Caption = 'Adresa IP'
+    end
+    object lPort: TLabel
+      Left = 9
+      Top = 62
+      Width = 19
+      Height = 13
+      Caption = 'Port'
+    end
+    object lHost: TLabel
+      Left = 8
+      Top = 36
+      Width = 28
+      Height = 13
+      Caption = 'Nume'
+    end
+    object eAdresa: TEdit
+      Left = 59
+      Top = 10
+      Width = 121
+      Height = 21
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = cl3DDkShadow
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+      Text = '127.0.0.1'
+      OnClick = eAdresaClick
+    end
+    object ePort: TEdit
+      Left = 59
+      Top = 61
+      Width = 121
+      Height = 21
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = cl3DDkShadow
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 1
+      Text = '2001'
+      OnClick = ePortClick
+    end
+    object btnConnect: TButton
+      Left = 8
+      Top = 88
+      Width = 169
+      Height = 25
+      Caption = 'Conecteaza-te'
+      TabOrder = 2
+      OnClick = btnConnectClick
+    end
+    object eNume: TEdit
+      Left = 59
+      Top = 34
+      Width = 121
+      Height = 21
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = cl3DDkShadow
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 3
+      Text = 'Numele tau'
+      OnClick = eNumeClick
+    end
+  end
+  object grupLoby: TGroupBox
+    Left = 264
+    Top = 24
+    Width = 505
+    Height = 193
+    TabOrder = 1
+    object lGata: TLabel
+      Left = 424
+      Top = 32
+      Width = 23
+      Height = 13
+      Caption = 'Gata'
+    end
+    object lNumeJucatori: TLabel
+      Left = 48
+      Top = 32
+      Width = 68
+      Height = 13
+      Caption = 'Nume Jucatori'
+    end
+    object lCuloare: TLabel
+      Left = 168
+      Top = 32
+      Width = 36
+      Height = 13
+      Caption = 'Culoare'
+    end
+    object l1: TLabel
+      Left = 24
+      Top = 56
+      Width = 6
+      Height = 13
+      Caption = '1'
+    end
+    object l2: TLabel
+      Left = 24
+      Top = 88
+      Width = 6
+      Height = 13
+      Caption = '2'
+    end
+    object l3: TLabel
+      Left = 24
+      Top = 120
+      Width = 6
+      Height = 13
+      Caption = '3'
+    end
+    object l4: TLabel
+      Left = 24
+      Top = 152
+      Width = 6
+      Height = 13
+      Caption = '4'
+    end
+    object grPlayer1: TGroupBox
+      Left = 46
+      Top = 47
+      Width = 441
+      Height = 27
+      TabOrder = 0
+      Visible = False
+      object lNumePlayer1: TLabel
+        Left = 16
+        Top = 8
+        Width = 29
+        Height = 13
+        Caption = 'Player'
+      end
+      object rbGalben1: TRadioButton
+        Left = 112
+        Top = 8
+        Width = 65
+        Height = 17
+        Caption = 'Galben'
+        TabOrder = 0
+        OnClick = rbGalben1Click
+      end
+      object rbVerde1: TRadioButton
+        Left = 176
+        Top = 8
+        Width = 65
+        Height = 17
+        Caption = 'Verde'
+        TabOrder = 1
+        OnClick = rbVerde1Click
+      end
+      object rbRosu1: TRadioButton
+        Left = 240
+        Top = 8
+        Width = 65
+        Height = 17
+        Caption = 'Rosu'
+        TabOrder = 2
+        OnClick = rbRosu1Click
+      end
+      object rbAlbastru1: TRadioButton
+        Left = 301
+        Top = 8
+        Width = 65
+        Height = 17
+        Caption = 'Albastru'
+        TabOrder = 3
+        OnClick = rbAlbastru1Click
+      end
+      object cb1: TCheckBox
+        Left = 384
+        Top = 8
+        Width = 14
+        Height = 17
+        TabOrder = 4
+        OnClick = cb1Click
+      end
+    end
+    object grPlayer2: TGroupBox
+      Left = 46
+      Top = 79
+      Width = 441
+      Height = 27
+      TabOrder = 1
+      Visible = False
+      object lNumePlayer2: TLabel
+        Left = 16
+        Top = 8
+        Width = 29
+        Height = 13
+        Caption = 'Player'
+      end
+      object rbGalben2: TRadioButton
+        Left = 112
+        Top = 8
+        Width = 65
+        Height = 17
+        Caption = 'Galben'
+        TabOrder = 0
+        OnClick = rbGalben2Click
+      end
+      object rbVerde2: TRadioButton
+        Left = 176
+        Top = 8
+        Width = 65
+        Height = 17
+        Caption = 'Verde'
+        TabOrder = 1
+        OnClick = rbVerde2Click
+      end
+      object rbRosu2: TRadioButton
+        Left = 240
+        Top = 8
+        Width = 65
+        Height = 17
+        Caption = 'Rosu'
+        TabOrder = 2
+        OnClick = rbRosu2Click
+      end
+      object rbAlbastru2: TRadioButton
+        Left = 301
+        Top = 8
+        Width = 65
+        Height = 17
+        Caption = 'Albastru'
+        TabOrder = 3
+        OnClick = rbAlbastru2Click
+      end
+      object cb2: TCheckBox
+        Left = 384
+        Top = 8
+        Width = 15
+        Height = 17
+        TabOrder = 4
+        OnClick = cb2Click
+      end
+    end
+    object grPlayer3: TGroupBox
+      Left = 46
+      Top = 111
+      Width = 441
+      Height = 27
+      TabOrder = 2
+      Visible = False
+      object lNumePlayer3: TLabel
+        Left = 16
+        Top = 8
+        Width = 29
+        Height = 13
+        Caption = 'Player'
+      end
+      object rbGalben3: TRadioButton
+        Left = 112
+        Top = 8
+        Width = 65
+        Height = 17
+        Caption = 'Galben'
+        TabOrder = 0
+        OnClick = rbGalben3Click
+      end
+      object rbVerde3: TRadioButton
+        Left = 176
+        Top = 8
+        Width = 65
+        Height = 17
+        Caption = 'Verde'
+        TabOrder = 1
+        OnClick = rbVerde3Click
+      end
+      object rbRosu3: TRadioButton
+        Left = 240
+        Top = 8
+        Width = 65
+        Height = 17
+        Caption = 'Rosu'
+        TabOrder = 2
+        OnClick = rbRosu3Click
+      end
+      object rbAlbastru3: TRadioButton
+        Left = 301
+        Top = 8
+        Width = 65
+        Height = 17
+        Caption = 'Albastru'
+        TabOrder = 3
+        OnClick = rbAlbastru3Click
+      end
+      object cb3: TCheckBox
+        Left = 384
+        Top = 8
+        Width = 15
+        Height = 17
+        TabOrder = 4
+        OnClick = cb3Click
+      end
+    end
+    object grPlayer4: TGroupBox
+      Left = 46
+      Top = 143
+      Width = 441
+      Height = 27
+      TabOrder = 3
+      Visible = False
+      object lNumePlayer4: TLabel
+        Left = 16
+        Top = 8
+        Width = 29
+        Height = 13
+        Caption = 'Player'
+      end
+      object rbGalben4: TRadioButton
+        Left = 112
+        Top = 8
+        Width = 65
+        Height = 17
+        Caption = 'Galben'
+        TabOrder = 0
+        OnClick = rbGalben4Click
+      end
+      object rbVerde4: TRadioButton
+        Left = 176
+        Top = 8
+        Width = 65
+        Height = 17
+        Caption = 'Verde'
+        TabOrder = 1
+        OnClick = rbVerde4Click
+      end
+      object rbRosu4: TRadioButton
+        Left = 240
+        Top = 8
+        Width = 65
+        Height = 17
+        Caption = 'Rosu'
+        TabOrder = 2
+        OnClick = rbRosu4Click
+      end
+      object rbAlbastru4: TRadioButton
+        Left = 301
+        Top = 8
+        Width = 65
+        Height = 17
+        Caption = 'Albastru'
+        TabOrder = 3
+        OnClick = rbAlbastru4Click
+      end
+      object cb4: TCheckBox
+        Left = 384
+        Top = 8
+        Width = 14
+        Height = 17
+        TabOrder = 4
+        OnClick = cb4Click
+      end
+    end
+  end
+  object btnSinglePlayer: TButton
+    Left = 40
+    Top = 151
+    Width = 161
+    Height = 33
+    Caption = 'Joaca fara retea'
+    TabOrder = 2
+    OnClick = btnSinglePlayerClick
+  end
+  object mVerifica: TTimer
+    Interval = 100
+    OnTimer = mVerificaTimer
+    Left = 72
+    Top = 192
+  end
+  object tNumaratoare: TTimer
+    Enabled = False
+    OnTimer = tNumaratoareTimer
+    Left = 112
+    Top = 192
+  end
+  object tTrimiteNume: TTimer
+    Enabled = False
+    Interval = 200
+    OnTimer = tTrimiteNumeTimer
+    Left = 152
+    Top = 192
+  end
+end
